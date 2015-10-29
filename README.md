@@ -2,6 +2,16 @@
 
 生成[Morphia datastore](https://github.com/mongodb/morphia/wiki/Datastore)的工厂类。支持依赖注入([JSR 330](https://jcp.org/en/jsr/detail?id=330)标准)，在[Guice](https://github.com/google/guice)中测试通过。
 
+## 安装
+
+在`build.sbt`中加入：
+
+```sbt
+"com.lvxingpai" %% "morphia-factory" % "0.1.2"
+```
+
+注意：安装此artifact需要有[Lvxingpai sbt Repository](http://nexus.lvxingpai.com)的访问权限。
+
 ## 使用方法
 
 核心为下面这个工厂类的trait:
@@ -32,3 +42,7 @@ val datastore = MorphiaFactoryImpl.newInstance(database = "test", validation = t
 ```
 
 上述方法将返回`org.mongodb.morphia.Datastore`对象，可以用于后续的Morphia操作。
+
+## 构建状态
+
+[![Build Status](http://ci2.lvxingpai.com/buildStatus/icon?job=MorphiaFactory)](http://ci2.lvxingpai.com/job/MorphiaFactory)

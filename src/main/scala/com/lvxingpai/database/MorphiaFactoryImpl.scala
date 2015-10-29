@@ -6,6 +6,8 @@ import org.mongodb.morphia.{ Morphia, ValidationExtension }
 import scala.collection.JavaConversions._
 
 /**
+ * Morphia Datastore的工厂类
+ *
  * Created by zephyre on 10/29/15.
  */
 object MorphiaFactoryImpl extends MorphiaFactory {
