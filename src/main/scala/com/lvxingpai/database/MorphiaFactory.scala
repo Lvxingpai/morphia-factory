@@ -18,7 +18,7 @@ trait MorphiaFactory {
    * @param user 用户名，默认为None
    * @param password 密码，默认为None
    * @param options 其它连接选项，默认为None
-   * @param validation 是否启用validation
+   * @param validation 是否启用validation，默认为false
    */
   def newInstance(host: String = "localhost", port: Int = 27017, database: String = "local",
     adminSource: Option[String] = None, user: Option[String] = None, password: Option[String] = None,

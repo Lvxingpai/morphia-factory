@@ -8,7 +8,7 @@ import scala.collection.JavaConversions._
 /**
  * Created by zephyre on 10/29/15.
  */
-class MorphiaFactoryImpl extends MorphiaFactory {
+object MorphiaFactoryImpl extends MorphiaFactory {
 
   private def initClient(host: String = "localhost", port: Int = 27017, database: String = "local",
     user: Option[String] = None, password: Option[String] = None,
