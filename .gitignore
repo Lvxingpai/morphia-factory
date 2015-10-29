@@ -12,6 +12,7 @@ lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
+project/credentials.sbt
 
 # Scala-IDE specific
 .scala_dependencies
@@ -20,4 +21,5 @@ project/plugins/project/
 activator*
 
 .idea/*
+scalastyle-config.xml
 
