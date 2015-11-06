@@ -11,8 +11,7 @@ import org.mongodb.morphia.Datastore
 trait MorphiaFactory {
   /**
    * 建立MongoDB连接
-   * @param host 服务器地址，默认为localhost
-   * @param port 服务器端口，默认为27017
+   * @param addresses 服务器地址(支持replica set)
    * @param database 数据库名称
    * @param adminSource 在哪个数据库上做用户验证？默认为database
    * @param user 用户名，默认为None
@@ -20,7 +19,7 @@ trait MorphiaFactory {
    * @param options 其它连接选项，默认为None
    * @param validation 是否启用validation，默认为false
    */
-  def newInstance(host: String = "localhost", port: Int = 27017, database: String = "local",
+  def newInstance(addresses: Seq[(String, Int)] = Seq("localhost" -> 27017), database: String = "local",
     adminSource: Option[String] = None, user: Option[String] = None, password: Option[String] = None,
     options: Option[MongoClientOptions] = None, validation: Boolean = false): Datastore
 }

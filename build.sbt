@@ -2,7 +2,7 @@ name := """morphia-factory"""
 
 organization := "com.lvxingpai"
 
-version := "0.1.2"
+version := "0.2.0"
 
 scalaVersion := "2.11.4"
 
@@ -20,16 +20,4 @@ libraryDependencies ++= Seq(
 )
 
 // Uncomment to use Akka
-//libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.3.11"
 
-scalariformSettings
-
-publishTo := {
-  val nexus = "http://nexus.lvxingpai.com/content/repositories/"
-  if (isSnapshot.value)
-    Some("publishSnapshots" at nexus + "snapshots")
-  else
-    Some("publishReleases" at nexus + "releases")
-}
-
-fork in run := true
